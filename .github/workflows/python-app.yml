@@ -5,7 +5,8 @@ name: Apex Legends Tournaments python
 
 on:
   pull_request:
-    branches: [ dev ]       
+    branches:
+      - dev
 
 jobs:
   build:
