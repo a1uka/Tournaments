@@ -95,4 +95,4 @@ end_str = "2026-05-31 07:00:00"
 start_timestamp = to_timestamp(start_str)
 end_timestamp = to_timestamp(end_str)
 a = api_key("8398be9b-5004ef1f4e527c2c390dc9", 	"ab01cf10",	"pe4afb4b", start_timestamp, end_timestamp)
-print(a.get_matches()['matches'][125]['player_results'])
+print(a.get_matches()['matches'][3]['player_results'][0].keys())
