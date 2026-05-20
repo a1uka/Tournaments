@@ -4,7 +4,7 @@ class Player:
         self.name = s_name
         self.played_matches = [] #storing mids here I think
 
-    def calc_stats(self, matches: list): # 
+    def calc_stats(self, matches: list) -> dict : 
         results = {
             
         }
@@ -229,6 +229,20 @@ class Stage:
         self.name = s_name
         self.format = s_format
         self.groups = []
+        self.group_number = 0
+        self.next = ""
+        self.prev = ""
+
+    def add_group(self, s_group: Group):
+        self.groups.append(s_group)
+        self.group_number += 1
+    
+    def del_group(self, group_ind: int):
+        self.groups.remove(group_ind)
+        self.group_number -= 1
+
+    
+
 
 
 class Tournament:
@@ -238,3 +252,4 @@ class Tournament:
         self.stages = []
 
     def add_match(self, match: Match):
+        
